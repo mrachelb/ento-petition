@@ -1,0 +1,33 @@
+* {
+    background: lightgray;
+}
+
+.view {
+    border: solid 5px darkred;
+    margin: 8px;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+canvas {
+    border: 3px dotted black;
+}
+
+.fields {
+}
+
+.submit-button {
+    height: 50px;
+    width: 300px;
+}
+
+input {
+    border-radius: 10px;
+    border: 5px solid darkred;
+    height: 30px;
+    width: 300px;
+    margin: 10px;
+}

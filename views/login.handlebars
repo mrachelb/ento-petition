@@ -1,0 +1,19 @@
+<div class="view">
+  <h1>please log in.</h1>
+	<div class="box-inputs">
+
+  <form class= "profile" method="post">
+	email address
+	  <input type="text" name="email" placeholder="email">
+	password
+	  <input type="password" name="password" placeholder="password">
+	  <input type="hidden" name="_csrf" value="{{csrfToken}}">
+	  <button id = 'login-button'>LOG IN</button>
+  </form>
+  </div>
+<div class="error">
+	  <h3> {{ error }} </h3>
+</div>
+
+	<p>If you haven't registered yet, do it <a href="/registration">here</a> </p>
+</div>

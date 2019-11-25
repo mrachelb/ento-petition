@@ -1,0 +1,42 @@
+<div class="view">
+
+	<h1>feel free to edit anything you want.</h1>
+  <div class="box-inputs">
+
+<form class= "profile" method="post">
+	{{#user}}
+      first name
+		  <input type="text" name="first" placeholder="first" value="{{first}}">
+			last name
+		  <input type="text" name="last" placeholder="last" value= "{{last}}">
+			email
+		  <input type="email" name="email" placeholder="email" value ="{{email}}">
+			password
+		  <input type="password" name="password" placeholder="password">
+			age
+		  <input type="text" name="age" placeholder="age" value="{{age}}">
+			city
+		  <input type="text" name="city" placeholder="city" value="{{city}}">
+			homepage
+		  <input type="text" name="homepage" placeholder="homepage" value="{{url}}">
+		  {{/user}}
+		  <input type="hidden" name="_csrf" value="{{csrfToken}}">
+		  <button name="button" class = "continue-button" id = 'submit'>UPDATE</button>
+
+
+	    <h3> {{error}} </h3>
+
+  </div>
+</form>
+<form class="unsign" action="/profile/edit/unsign" method="post">
+{{#if signature}}
+    <img src="{{signature}}" id='sigimg'>
+	  <button name="button" class = "delete-sig" type='submit'>DELETE SIGNATURE</button>
+{{/if}}
+		<input type="hidden" name="_csrf" value="{{csrfToken}}">
+</form>
+<form class="delete-user" action="/profile/edit/deleteuser" method="post">
+		<input type="hidden" name="_csrf" value="{{csrfToken}}">
+	  <button name="button" class="delete-all" type="submit">DELETE PROFILE</button>
+</form>
+</div>
